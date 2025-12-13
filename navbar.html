@@ -3,45 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar</title>
+    <title>Responsive Navbar</title>
+
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+        }
+
+        nav{
+            width:100%;
+            padding:15px 40px;
+            background:#d4d2d2;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .name{
+            font-size:26px;
+            font-weight:bold;
+        }
+
+        .menu{
+            list-style:none;
+            display:flex;
+            gap:25px;
+        }
+
+        .menu li a{
+            text-decoration:none;
+            font-size:18px;
+            color:black;
+        }
+
+        .menu-btn{
+            display:none;
+            font-size:28px;
+            cursor:pointer;
+        }
+
+        @media (max-width: 768px){
+            nav{
+                padding:15px 20px;
+            }
+
+            .menu{
+                position:absolute;
+                top:65px;
+                right:0;
+                background:#d4d2d2;
+                width:100%;
+                flex-direction:column;
+                align-items:center;
+                display:none;
+                padding:20px 0;
+            }
+
+            .menu li{
+                margin:10px 0;
+            }
+
+            .menu-btn{
+                display:block;
+            }
+
+            #check:checked ~ .menu{
+                display:flex;
+            }
+        }
+    </style>
 </head>
-<style>
-    *{
-        padding:0;
-        margin:0;
-        box-sizing:border-box;
-    }
-
-    nav{
-        width:100%;
-        padding:15px 40px;
-        background:#d4d2d2;
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-    }
-
-    .name{
-        font-size:26px;
-        font-weight:bold;
-    }
-
-    .menu{
-        list-style:none;
-        display:flex;
-        gap:25px;
-    }
-
-    a{
-        text-decoration:none;
-        font-size:18px;
-        color:black;
-    }
-</style>
 
 <body>
-    <nav>
+
+<nav>
     <div class="name">SnapDeal</div>
+
+    <input type="checkbox" id="check" hidden>
+    <label for="check" class="menu-btn">&#9776;</label>
+
     <ul class="menu">
         <li><a href="#">Home</a></li>
         <li><a href="#">Shop</a></li>
@@ -49,12 +91,11 @@
         <li><a href="#">Offers</a></li>
         <li><a href="#">Support</a></li>
     </ul>
-    
-    </nav><br>
-    
+</nav>
 
-    <p>This is a nice website.Come and fill your details.This is a navbar for shopsy Website</p>
-    
+<br>
+
+<p>This is a nice website. Come and fill your details. This is a navbar for shopsy Website.</p>
+
 </body>
 </html>
-
