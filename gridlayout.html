@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Responsive layout</title>
+</head>
+<style>
+    *{
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+    }
+
+    body{
+        display: flex;
+        justify-content: center;
+    }
+
+    .container{
+        display:grid;
+        height:900px;
+        width:1200px;
+        grid-template-rows: 1fr 1fr 1fr 4fr 1fr;
+        gap:10px;
+    }
+
+    .row{
+        background-color: lightgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+
+    .box{
+        background-color: grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        font-weight: bold;
+        border-radius: 10px;
+
+    }
+
+    .boxes{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap:10px;
+    }
+    
+    @media screen and (max-width:900px){
+        .boxes{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        
+    }
+
+    @media screen and (max-width:600px){
+        .boxes{
+            display:grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="row">Logo</div>
+        <div class="row">Header</div>
+        <div class="row">textarea</div>
+        <div class="boxes">
+            <div class="box">Box1</div>
+            <div class="box">Box2</div>
+            <div class="box">Box3</div>
+         </div>
+        <div class="row">Footer</div>
+    </div>
+    
+</body>
+</html>
