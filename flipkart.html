@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Clone</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            background-color:#F1F2F4;
+        }
+
+        #header{
+            display:flex;
+            justify-content:space-evenly;
+            align-items:center;
+            height:70px;
+            background-color:white;
+        }
+
+        #header > div {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+
+        #search-box{
+            background-color:aliceblue;
+            width:500px;
+            height:30px;
+            border-radius:5px;
+            padding:10px;
+        }
+
+        #login-dropdown{
+            width:150px;
+            height:40px;
+            text-align:center;
+            border-radius:5px;
+        }
+
+        #category-row{
+            display:flex;
+            justify-content:space-evenly;
+            margin:10px;
+            padding:10px 0;
+            height:100px;
+            background-color:white;
+        }
+
+        .category-item{
+            text-align:center;
+        }
+
+        #banner{
+            width:100%;
+            height:100%;
+        }
+
+        .offers{
+            display:grid;
+            grid-template-rows: repeat(2,1fr);
+            grid-template-columns: repeat(3,1fr);
+            width:100%;
+            img{
+                width:100%;
+            }
+        }
+
+
+        .midcontainer{
+            display:grid;
+            width:100%;
+            height:700px;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap:10px;
+        }
+
+
+        .topdeals{
+            background-color: white;
+            padding:10px;
+            gap:5px;
+        }
+
+        .insidedeals{
+            display:grid;
+            height:95%;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            gap:10px;
+        }
+
+        .dealin{
+            border:2px solid lightgrey;
+            padding:10px;
+            
+            img{
+                width:100%;
+                height:80%;
+                border-radius: 10px;
+            }
+
+            
+        }
+
+
+        .dealname{
+            font-size: 30px;
+        }
+
+
+        .size{
+            color: green;
+            font-size: 24px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="main-container">
+
+        <div id="header">
+            <div>
+                <img src="flipkartlogo.svg">
+            </div>
+
+            <div>
+                <input id="search-box" type="search" placeholder="Search for products, Brands and More">
+            </div>
+
+            <div>
+                <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/profile-6bae67.svg">
+                <input id="login-dropdown" list="login" placeholder="Login">
+            </div>
+
+            <div>
+                <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-43eb4e.svg">
+                <button style="width:100px; height:30px; border-radius: 5px;">Cart</button>
+            </div>
+        </div>
+
+        <div id="category-row">
+            <div class="category-item">
+                <img src="minutes.webp">
+                <p>Minutes</p>
+            </div>
+            <div class="category-item">
+                <img src="electronics.webp">
+                <p>Electronics</p>
+            </div>
+            <div class="category-item">
+                <img src="mobiles.webp">
+                <p>Smartphone</p>
+            </div>
+            <div class="category-item">
+                <img src="tv.webp">
+                <p>Appliances</p>
+            </div>
+            <div class="category-item">
+                <img src="fashion.webp">
+                <p>Fashion</p>
+            </div>
+            <div class="category-item">
+                <img src="home and kitchen.webp">
+                <p>Decoration</p>
+            </div>
+            <div class="category-item">
+                <img src="aeroplane.webp">
+                <p>Aeroplane</p>
+            </div>
+        </div>
+
+        <div>
+            <img id="banner" src="https://rukminim2.flixcart.com/fk-p-flap/3240/540/image/a64908ba9bf2fe36.jpg?q=60">
+        </div>
+
+        <br>
+
+        <div class="offers">
+            <div><img src="offer1.webp" alt="offer1"></div>
+            <div><img src="offer2.webp" alt="offer2"></div>
+            <div><img src="offer3.webp" alt="offer3"></div>
+            <div><img src="offer4.webp" alt="offer4"></div>
+            <div><img src="offer5.webp" alt="offer5"></div>
+            <div><img src="offer6.webp" alt="offer6"></div>
+        </div>
+
+        <div class="midcontainer">
+            <div class="topdeals">
+                <h1>Best Deals On Furniture</h1>
+                <div class="insidedeals">
+                    <div class="dealin">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/shoe-rack/5/g/s/12-12-0-4-4-tier-shoe-rack-organiser-black-plastic-storage-shelf-original-imahhgjg2waymywh.jpeg?q=60" alt="shoerack">
+                        <p class="dealname">Shoe Rack</p>
+                        <p class="size">Min. 50% Off</p>
+                    </div>
+                    <div class="dealin">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/collapsible-wardrobe/2/w/x/280-carbon-steel-570-1-4-eem-4-firozi-eemway-firozi-730-original-imaghtr8aghtugdf.jpeg?q=60" alt="Wardrobes">
+                        <p class="dealname">Wardrobes</p>
+                        <p class="size">Min. 50% Off</p>
+                    </div>
+                    <div class="dealin">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/home-temple/s/x/d/t1white-hoodwin-original-imah99vgphekyteg.jpeg?q=60" alt="Home Temple">
+                        <p class="dealname">Home Temple</p>
+                        <p class="size">Min. 50% Off</p>
+
+                    </div>
+                    <div class="dealin">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/shopsy-baby-bed/q/n/g/cotton-child-jhula-for-1-3-year-indoor-for-kids-swing-for-kids-original-imahceaguqvvkekc.jpeg?q=60" alt="Swings">
+                        <p class="dealname">Swings</p>
+                        <p class="size">Min. 50% Off</p>
+                    
+                    </div>
+                </div>
+                
+            </div>
+            <div class="topdeals">
+                <h1>Top Picks Of Sale</h1>
+                <div class="insidedeals">
+                    <div class="dealin">
+                        <img src="http://rukminim2.flixcart.com/image/420/420/xif0q/speaker/smart-speaker/5/p/a/m3-portable-bluetooth-mini-speaker-dynamic-metal-sound-with-high-original-imah5ghbz6tqn68z.jpeg?q=60" alt="Speaker">
+                        <p class="dealname">Speaker</p>
+                        <p class="size">Min. 50% Off</p>
+                    </div>
+                    <div class="dealin">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/wall-clock/z/v/o/handpainted-peacock-wall-clock-32-5-wc-331-analog-divinecrafts-original-imahfq86hvchwxz2.jpeg?q=60" alt="Wallclock">
+                        <p class="dealname">WallClock</p>
+                        <p class="size">Min. 60% Off</p>
+                    </div>
+                    <div class="dealin">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/headphone/l/a/j/nb120-amaze-upto-50-hrs-playtime-dual-pairing-fast-charing-z2-original-imahgfaqsvhnhabr.jpeg?q=60" alt="Neckband">
+                        <p class="dealname">Neckband</p>
+                        <p class="size">Min. 40% Off</p>
+
+                    </div>
+                    <div class="dealin">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/headphone/3/c/f/new-edition-tws-m19-gaming-earbuds-bluetooth-5-0-wireless-led-original-imah96zwnpzh4gu7.jpeg?q=60" alt="Earphones">
+                        <p class="dealname">Earphones</p>
+                        <p class="size">Min. 40% Off</p>
+
+                    </div>
+                </div>
+                
+            </div>
+            <div class="topdeals">
+                <h1>Fashion's Top Deal</h1>
+                <div class="insidedeals">
+                    <div class="dealin">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/shoe/d/b/x/6-biss-2031-blu-wht-40-bruton-blue-original-imahczyufwkmpeyq.jpeg?q=60" alt="Shoes">
+                        <p class="dealname">Shoes</p>
+                        <p class="size">Min. 70% Off</p>
+                    </div>
+                    <div class="dealin">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/slipper-flip-flop/4/i/c/8-eagle-f-b-black-06-cloker-black-original-imahgphm8hznjvdg.jpeg?q=60">
+                        <p class="dealname">Slippers</p>
+                        <p class="size">Min. 80% Off</p>
+                    </div>
+                    <div class="dealin">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/bag/t/0/e/53-travel-for-outdoor-sport-hikiing-bag-30-smartlook-75-26-5-original-imahgz6mgjg6uqs4.jpeg?q=60" alt="Bags">
+                        <p class="dealname">Bags</p>
+                        <p class="size">Min. 50% Off</p>
+                    </div>
+                    <div class="dealin">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/watch/2/9/9/1-watch-for-men001-fixbit-men-original-imahhjxcw323bzbp.jpeg?q=60" alt="Watches">
+                        <p class="dealname">Wrist Watches</p>
+                        <p class="size">Min. 90% Off</p>
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+        
+
+        
+    </div>
+
+</body>
+</html>
