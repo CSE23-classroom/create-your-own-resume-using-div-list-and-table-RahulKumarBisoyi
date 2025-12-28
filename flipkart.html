@@ -6,22 +6,22 @@
     <title>Flipkart Clone</title>
 
     <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        body{
-            background-color:#F1F2F4;
+        body {
+            background-color: #F1F2F4;
         }
 
-        #header{
-            display:flex;
-            justify-content:space-evenly;
-            align-items:center;
-            height:70px;
-            background-color:white;
+        #header {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 70px;
+            background-color: white;
         }
 
         #header > div {
@@ -30,104 +30,160 @@
             gap: 6px;
         }
 
-
-        #search-box{
-            background-color:aliceblue;
-            width:500px;
-            height:30px;
-            border-radius:5px;
-            padding:10px;
+        #search-box {
+            background-color: aliceblue;
+            width: 500px;
+            height: 30px;
+            border-radius: 5px;
+            padding: 10px;
         }
 
-        #login-dropdown{
-            width:150px;
-            height:40px;
-            text-align:center;
-            border-radius:5px;
+        #login-dropdown {
+            width: 150px;
+            height: 40px;
+            text-align: center;
+            border-radius: 5px;
         }
 
-        #category-row{
-            display:flex;
-            justify-content:space-evenly;
-            margin:10px;
-            padding:10px 0;
-            height:100px;
-            background-color:white;
-        }
-
-        .category-item{
-            text-align:center;
-        }
-
-        #banner{
-            width:100%;
-            height:100%;
-        }
-
-        .offers{
-            display:grid;
-            grid-template-rows: repeat(2,1fr);
-            grid-template-columns: repeat(3,1fr);
-            width:100%;
-            img{
-                width:100%;
-            }
-        }
-
-
-        .midcontainer{
-            display:grid;
-            width:100%;
-            height:700px;
-            grid-template-rows: 1fr;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap:10px;
-        }
-
-
-        .topdeals{
+        #category-row {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 10px;
+            padding: 10px 0;
+            height: 100px;
             background-color: white;
-            padding:10px;
-            gap:5px;
         }
 
-        .insidedeals{
-            display:grid;
-            height:95%;
-            grid-template-rows: 1fr 1fr;
-            grid-template-columns: 1fr 1fr;
-            gap:10px;
+        .category-item {
+            text-align: center;
         }
 
-        .dealin{
-            border:2px solid lightgrey;
-            padding:10px;
-            
-            img{
-                width:100%;
-                height:80%;
-                border-radius: 10px;
-            }
-
-            
+        #banner {
+            width: 100%;
+            height: 100%;
         }
 
+        .offers {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            width: 100%;
+        }
 
-        .dealname{
+        .offers img {
+            width: 100%;
+        }
+
+        .midcontainer {
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .middeals {
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .topdeals {
+            margin-top: 10px;
+            background-color: white;
+            padding: 10px;
+        }
+
+        .insidedeals {
+            display: grid;
+            height: 95%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .dealin {
+            border: 2px solid lightgrey;
+            padding: 10px;
+        }
+
+        .dealin img {
+            width: 100%;
+            height: 70%;
+            border-radius: 10px;
+        }
+
+        .dealname {
             font-size: 30px;
         }
 
-
-        .size{
+        .size {
             color: green;
             font-size: 24px;
+        }
+
+        .lowerdeal{
+            background-color: white;
+            width:100%;
+            padding-left:10px;
+        }
+
+        .deallower{
+            display:grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap:10px;
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        .deallower img{
+            border-radius: 5px;
+            height:85%;
+
+        }
+
+        .ldname{
+            font-size: 20px;
+        }
+
+         .footer{
+            padding-top:50px;
+            display:grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(6,1fr);
+            width:100%;
+            height:300px;
+            background-color:#212121;
+        } 
+
+        .column1{
+            padding-left: 25px;
+        }
+
+        .column1 h3{
+            margin-bottom: 10px;
+            font-size:15px;
+            color:#878787;
+        }
+
+        .column1 ul{
+            list-style: none;
+            text-align: left;
+        }
+
+        .column1 ul li{
+            color: white;
+        }
+
+        .column1 p{
+            color: white;
         }
 
     </style>
 </head>
 
 <body>
-
     <div id="main-container">
 
         <div id="header">
@@ -146,7 +202,7 @@
 
             <div>
                 <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-43eb4e.svg">
-                <button style="width:100px; height:30px; border-radius: 5px;">Cart</button>
+                <button style="width:100px;height:30px;border-radius:5px;">Cart</button>
             </div>
         </div>
 
@@ -185,15 +241,13 @@
             <img id="banner" src="https://rukminim2.flixcart.com/fk-p-flap/3240/540/image/a64908ba9bf2fe36.jpg?q=60">
         </div>
 
-        <br>
-
         <div class="offers">
-            <div><img src="offer1.webp" alt="offer1"></div>
-            <div><img src="offer2.webp" alt="offer2"></div>
-            <div><img src="offer3.webp" alt="offer3"></div>
-            <div><img src="offer4.webp" alt="offer4"></div>
-            <div><img src="offer5.webp" alt="offer5"></div>
-            <div><img src="offer6.webp" alt="offer6"></div>
+            <div><img src="offer1.webp"></div>
+            <div><img src="offer2.webp"></div>
+            <div><img src="offer3.webp"></div>
+            <div><img src="offer4.webp"></div>
+            <div><img src="offer5.webp"></div>
+            <div><img src="offer6.webp"></div>
         </div>
 
         <div class="midcontainer">
@@ -201,63 +255,59 @@
                 <h1>Best Deals On Furniture</h1>
                 <div class="insidedeals">
                     <div class="dealin">
-                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/shoe-rack/5/g/s/12-12-0-4-4-tier-shoe-rack-organiser-black-plastic-storage-shelf-original-imahhgjg2waymywh.jpeg?q=60" alt="shoerack">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/shoe-rack/5/g/s/12-12-0-4-4-tier-shoe-rack-organiser-black-plastic-storage-shelf-original-imahhgjg2waymywh.jpeg?q=60">
                         <p class="dealname">Shoe Rack</p>
                         <p class="size">Min. 50% Off</p>
                     </div>
                     <div class="dealin">
-                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/collapsible-wardrobe/2/w/x/280-carbon-steel-570-1-4-eem-4-firozi-eemway-firozi-730-original-imaghtr8aghtugdf.jpeg?q=60" alt="Wardrobes">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/collapsible-wardrobe/2/w/x/280-carbon-steel-570-1-4-eem-4-firozi-eemway-firozi-730-original-imaghtr8aghtugdf.jpeg?q=60">
                         <p class="dealname">Wardrobes</p>
                         <p class="size">Min. 50% Off</p>
                     </div>
                     <div class="dealin">
-                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/home-temple/s/x/d/t1white-hoodwin-original-imah99vgphekyteg.jpeg?q=60" alt="Home Temple">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/home-temple/s/x/d/t1white-hoodwin-original-imah99vgphekyteg.jpeg?q=60">
                         <p class="dealname">Home Temple</p>
                         <p class="size">Min. 50% Off</p>
-
                     </div>
                     <div class="dealin">
-                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/shopsy-baby-bed/q/n/g/cotton-child-jhula-for-1-3-year-indoor-for-kids-swing-for-kids-original-imahceaguqvvkekc.jpeg?q=60" alt="Swings">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/shopsy-baby-bed/q/n/g/cotton-child-jhula-for-1-3-year-indoor-for-kids-swing-for-kids-original-imahceaguqvvkekc.jpeg?q=60">
                         <p class="dealname">Swings</p>
                         <p class="size">Min. 50% Off</p>
-                    
                     </div>
                 </div>
-                
             </div>
+
             <div class="topdeals">
                 <h1>Top Picks Of Sale</h1>
                 <div class="insidedeals">
                     <div class="dealin">
-                        <img src="http://rukminim2.flixcart.com/image/420/420/xif0q/speaker/smart-speaker/5/p/a/m3-portable-bluetooth-mini-speaker-dynamic-metal-sound-with-high-original-imah5ghbz6tqn68z.jpeg?q=60" alt="Speaker">
+                        <img src="http://rukminim2.flixcart.com/image/420/420/xif0q/speaker/smart-speaker/5/p/a/m3-portable-bluetooth-mini-speaker-dynamic-metal-sound-with-high-original-imah5ghbz6tqn68z.jpeg?q=60">
                         <p class="dealname">Speaker</p>
                         <p class="size">Min. 50% Off</p>
                     </div>
                     <div class="dealin">
-                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/wall-clock/z/v/o/handpainted-peacock-wall-clock-32-5-wc-331-analog-divinecrafts-original-imahfq86hvchwxz2.jpeg?q=60" alt="Wallclock">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/wall-clock/z/v/o/handpainted-peacock-wall-clock-32-5-wc-331-analog-divinecrafts-original-imahfq86hvchwxz2.jpeg?q=60">
                         <p class="dealname">WallClock</p>
                         <p class="size">Min. 60% Off</p>
                     </div>
                     <div class="dealin">
-                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/headphone/l/a/j/nb120-amaze-upto-50-hrs-playtime-dual-pairing-fast-charing-z2-original-imahgfaqsvhnhabr.jpeg?q=60" alt="Neckband">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/headphone/l/a/j/nb120-amaze-upto-50-hrs-playtime-dual-pairing-fast-charing-z2-original-imahgfaqsvhnhabr.jpeg?q=60">
                         <p class="dealname">Neckband</p>
                         <p class="size">Min. 40% Off</p>
-
                     </div>
                     <div class="dealin">
-                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/headphone/3/c/f/new-edition-tws-m19-gaming-earbuds-bluetooth-5-0-wireless-led-original-imah96zwnpzh4gu7.jpeg?q=60" alt="Earphones">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/headphone/3/c/f/new-edition-tws-m19-gaming-earbuds-bluetooth-5-0-wireless-led-original-imah96zwnpzh4gu7.jpeg?q=60">
                         <p class="dealname">Earphones</p>
                         <p class="size">Min. 40% Off</p>
-
                     </div>
                 </div>
-                
             </div>
+
             <div class="topdeals">
                 <h1>Fashion's Top Deal</h1>
                 <div class="insidedeals">
                     <div class="dealin">
-                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/shoe/d/b/x/6-biss-2031-blu-wht-40-bruton-blue-original-imahczyufwkmpeyq.jpeg?q=60" alt="Shoes">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/shoe/d/b/x/6-biss-2031-blu-wht-40-bruton-blue-original-imahczyufwkmpeyq.jpeg?q=60">
                         <p class="dealname">Shoes</p>
                         <p class="size">Min. 70% Off</p>
                     </div>
@@ -267,25 +317,164 @@
                         <p class="size">Min. 80% Off</p>
                     </div>
                     <div class="dealin">
-                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/bag/t/0/e/53-travel-for-outdoor-sport-hikiing-bag-30-smartlook-75-26-5-original-imahgz6mgjg6uqs4.jpeg?q=60" alt="Bags">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/bag/t/0/e/53-travel-for-outdoor-sport-hikiing-bag-30-smartlook-75-26-5-original-imahgz6mgjg6uqs4.jpeg?q=60">
                         <p class="dealname">Bags</p>
                         <p class="size">Min. 50% Off</p>
                     </div>
                     <div class="dealin">
-                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/watch/2/9/9/1-watch-for-men001-fixbit-men-original-imahhjxcw323bzbp.jpeg?q=60" alt="Watches">
-                        <p class="dealname">Wrist Watches</p>
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/watch/2/9/9/1-watch-for-men001-fixbit-men-original-imahhjxcw323bzbp.jpeg?q=60">
+                        <p class="dealname">Watches</p>
                         <p class="size">Min. 90% Off</p>
-                        
                     </div>
                 </div>
-                
+            </div>
+        </div>
+
+        <div class="middeals">
+            <div class="topdeals">
+                <h1>Top picks of the sale</h1>
+                <div class="insidedeals">
+                    <div class="dealin">
+                        <img src="https://rukminim2.flixcart.com/image/240/240/ki3gknk0/helmet/p/4/9/sba-1-cesar-sba-1-cesar-full-face-steelbird-original-imafxyhzwrhqyvcx.jpeg?q=60">
+                        <p class="dealname">Helmets</p>
+                        <p class="size">Min. 80% Off</p>
+                    </div>
+                    <div class="dealin">
+                        <img src="https://rukminim2.flixcart.com/image/240/240/kbzergw0/instant-camera/z/9/d/instax-instant-camera-mini-11-fujifilm-original-imaft7fpz3bufu3b.jpeg?q=60">
+                        <p class="dealname">Camera</p>
+                        <p class="size">Min. 30% Off</p>
+                    </div>
+                    <div class="dealin">
+                        <img src="https://rukminim2.flixcart.com/image/240/240/xif0q/water-purifier/q/d/w/m2-needs-no-service-for-2-years-10-stage-filtration-native-by-original-imah2usukstmh2ru.jpeg?q=60">
+                        <p class="dealname">Home Essentials</p>
+                        <p class="size">Min. 60% Off</p>
+                    </div>
+                    <div class="dealin">
+                        <img src="https://rukminim2.flixcart.com/image/240/240/xif0q/office-study-chair/z/t/2/1-teak-sagun-58-42-js-29-beaatho-121-92-original-imagrwgshgp2bhwv.jpeg?q=60">
+                        <p class="dealname">Office chairs</p>
+                        <p class="size">Min. 40% Off</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="topdeals">
+                <h1>Best Value Deals on Fashion</h1>
+                <div class="insidedeals">
+                    <div class="dealin">
+                        <img src="https://rukminim2.flixcart.com/image/240/240/xif0q/shoe/s/c/x/-original-imagn9na9ysruzgs.jpeg?q=60">
+                        <p class="dealname">Shoes</p>
+                        <p class="size">Min. 70% Off</p>
+                    </div>
+                    <div class="dealin">
+                        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/jacket/9/3/p/xl-1-no-mt2-jkt-arrow-print-ice-blue-white-motrex-original-imahgnjm9qmkzfwz.jpeg?q=60">
+                        <p class="dealname">Jacket</p>
+                        <p class="size">Min. 60% Off</p>
+                    </div>
+                    <div class="dealin">
+                        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/4/n/b/xl-jr5nahlm6l-try-this-original-imahfe5fgwybrzk9.jpeg?q=70">
+                        <p class="dealname">Shirt</p>
+                        <p class="size">Min. 60% Off</p>
+                    </div>
+                    <div class="dealin">
+                        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/track-pant/s/k/l/xl-ic-pt220s050-indiclub-original-imah3hmfhctsjhjm.jpeg?q=70">
+                        <p class="dealname">Trouser</p>
+                        <p class="size">Min. 50% Off</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="topdeals">
+                <img src="https://rukminim2.flixcart.com/www/1060/1460/promos/15/09/2023/9c056ec4-f39c-4740-938d-33e1a6c7c108.jpg?q=60" width="480px">
+            </div>
+        </div>
+
+        <div class="lowerdeal">
+            <h1>Top Trending Deals</h1>
+            <div class="deallower">
+                <div>
+                    <img src="https://rukminim2.flixcart.com/image/240/240/xif0q/shoe-rack/j/4/5/32-85-0-2-plasticblack-shoe-rack-with-cover-plastic-double-5-original-imahezaa5fx2gram.jpeg?q=60">
+                    <p class="ldname">Shoe Rack</p>
+                    <p><b>From ₹479</b></p>
+                </div>
+                <div>
+                    <img src="https://rukminim2.flixcart.com/image/240/240/kg6vfrk0/portable-laptop-table/b/t/a/plywood-multifunction-easy-portable-and-foldable-study-table-for-original-imafwhhug8zzbgaw.jpeg?q=60">
+                    <p class="ldname">Portable Study Table</p>
+                    <p><b>From ₹299</b></p>
+                </div>
+                <div>
+                    <img src="https://rukminim2.flixcart.com/image/240/240/xif0q/sofa-set/e/x/h/74-74-peach-polyester-3-2-30-188-81-60-30-81-sofa-set-sydney-3-2-original-imahdwnzufzwghbz.jpeg?q=60">
+                    <p class="ldname">Sofas</p>
+                    <p><b>From ₹4999</b></p>
+                </div>
+                <div>
+                    <img src="https://rukminim2.flixcart.com/image/240/240/xif0q/office-study-chair/u/r/h/-original-imahazwfc3yvxfg3.jpeg?q=60">
+                    <p class="ldname">Chairs</p>
+                    <p><b>From ₹1299</b></p>
+                </div>
+                <div>
+                    <img src="https://rukminim2.flixcart.com/image/240/240/jm9hfgw0/bed/h/g/g/king-na-rosewood-sheesham-bkwl05nhbs0401d1p-flipkart-perfect-original-imaf97cwhvgnwg95.jpeg?q=60">
+                    <p class="Bed">Shoe Rack</p>
+                    <p><b>From ₹4299</b></p>
+                </div>
+            </div>
+            
+        </div><br>
+        <div class="footer">
+            <div class="column1">
+                <h3>ABOUT</h3>
+                <ul>
+                    <li>Contact Us</li>
+                    <li>About Us</li>
+                    <li>Careers</li>
+                    <li>Flipkart Stories</li>
+                    <li>Press</li>
+                    <li>Corporate Information</li>
+                </ul>
+            </div>
+            <div class="column1">
+                <h3>GROUP COMMPANIES</h3>
+                <ul>
+                    <li>Myntra</li>
+                    <li>Cleartrip</li>
+                    <li>Shopsy</li>
+                </ul>
+            </div>
+            <div class="column1">
+                <h3>HELP</h3>
+                <ul>
+                    <li>Payments</li>
+                    <li>Shipping</li>
+                    <li>Cancellations & Returns</li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+            <div class="column1">
+                <h3>CONSUMER POLICY</h3>
+                <ul>
+                    <li>Cancellations & Returns</li>
+                    <li>Terms of Use</li>
+                    <li>Security</li>
+                    <li>Privacy</li>
+                    <li>Sitemap</li>
+                    <li>EPR Compliance</li>
+                    <li>Grievance Redressal</li>
+                    <li>FSSAI Food Safety Connect App</li>
+                </ul>
+            </div>
+            <div class="column1">
+                <h3>Mail Us</h3>
+                <p>Flipkart Internet Private Limited, Buildings Alyssa, Begonia & Clove Embassy Tech Village, Outer Ring Road, Devarabeesanahall Vilage, Bengaluru, 560103, Kamataka, India</p>
+            </div>
+            <div class="column1">
+                <h3>Registered Ofiice Address</h3>
+                <p>Flipkart Internet Private Limited, Buildings Alyssa, Begonia & Clove Embassy Tech Village, Outer Ring Road, Devarabeesanahalli Village, Bengaluru, 560103, Karnataka, India</p>
+                <p>CIN: UST109KA2012PTC066107</p>
+                <p>Telephone:044-45614700/044-67415800</p>
             </div>
 
         </div>
         
 
-        
     </div>
-
 </body>
 </html>
